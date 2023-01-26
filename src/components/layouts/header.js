@@ -39,11 +39,16 @@ const Header = () => {
                     <div className="ml-4 dropdown d-inline">
                         <Link to="#!" className="btn dropdown-toggle text-white mr-4" type="button" id="dropDownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <figure className="avatar avatar-nav">
-                                <img
-                                    src={user.avatar.url}
+                                {user.role=='admin'?<img
+                                    src={'/images/default_avatar.jpg'}
                                     alt={user && user.name}
                                     className="rounded-circle"
-                                />
+                                />:<img
+                                src={user.avatar.url}
+                                alt={user && user.name}
+                                className="rounded-circle"
+                            />}
+                                
                             </figure>
                             <span>{user && user.firstName}</span>
                         </Link>
