@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { editProfile } from "../actions/userActions";
 import { useAlert } from "react-alert";
+import { EDIT_USER_RESET } from "../constants/userConstants";
 const Home = () => {
     const alert = useAlert();
     const { isAuthenticated, user, token, isUpdated } = useSelector(state => state.user);
@@ -20,8 +21,10 @@ const Home = () => {
     })
     const dispatch = useDispatch();
     useEffect(() => {
+        
         if (isUpdated) {
             alert.success("User Edited Successfully");
+            dispatch({type:EDIT_USER_RESET})
         }
 
     }, [isUpdated, dispatch.history, isAuthenticated])
