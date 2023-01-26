@@ -1,0 +1,132 @@
+/* .App {
+  text-align: center;
+} */
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.components{
+  margin: auto;
+}
+.components li{
+  display: inline-block;
+}
+.components a{
+  color: white;
+  padding: 0.6rem 0.6rem;
+  text-decoration: none;
+}
+#login_btn{
+  background-color: rgb(249, 205, 12);
+  border:none;
+  border-radius: 0.4rem;
+  padding: 0.5rem 3rem;
+}
+.home{
+  background-image: url('../public/images/college.png');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper{
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  font-weight: 700;
+}
+
+.wrapper form{
+  padding: 2.5rem 3rem;
+}
+.wrapper form .btn {
+  background-color: #fa9c23;
+  border-color: #fa9c23;
+  color: white;
+  margin-top: 2.5rem;
+}
+
+.avatar{
+  display: inline-block;
+  border-radius:50%;
+  margin-bottom: 0;
+}
+
+.avatar img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.avatar-nav {
+  margin-right: 0.6rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.avatar-pic{
+  margin-right: 0.6rem;
+  height: 4rem;
+  width: 4rem;
+}
+
+.container{
+  margin-top:100px;
+  border:solid 2px black;
+  /* padding:2rem; */
+  /* height:500px; */
+  /* box-sizing: border-box; */
+}
+
+.leftProfile{
+  border-right: 1px solid black;
+  height:100%;
+  padding:3rem;
+  /* box-sizing: border-box; */
+  
+}
+.save_btn{
+  
+  margin-top: 20rem;
+}
+
+table{
+  padding:6rem;
+  margin-top: 5rem;
+}
