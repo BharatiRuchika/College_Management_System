@@ -114,6 +114,7 @@ const Home = () => {
                             </div>
                             <div className="form-group">
                                 <label for="formGroupExampleInput2">Date Of Birth</label>
+                                
                                 <input type="date" className="form-control" id="formGroupExampleInput2" value={new_user.dateOfBirth} onChange={handleChange} name="dateOfBirth" />
                             </div>
                             <div className="form-group">
