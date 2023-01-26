@@ -1,5 +1,5 @@
 
-import { REGISTER_USER_FAIL, REGISTER_USER_SUCCESS, REGISTER_USER_REQUEST, CLEAR_ERRORS, EDIT_USER_REQUEST, EDIT_USER_SUCCESS, EDIT_USER_FAIL,EDIT_USER_RESET } from "../constants/userConstants"
+import { REGISTER_USER_FAIL, REGISTER_USER_SUCCESS, REGISTER_USER_REQUEST, CLEAR_ERRORS, EDIT_USER_REQUEST, EDIT_USER_SUCCESS, EDIT_USER_FAIL,EDIT_USER_RESET,DELETE_USER_RESET } from "../constants/userConstants"
 import { LOGIN_USER_REQUEST, LOGIN_USER_SUCCESS, LOGIN_USER_FAIL, LOGOUT_FAIL, LOGOUT_SUCCESS, } from '../constants/userConstants'
 import { GET_ALL_USERS_FAIL, GET_ALL_USERS_SUCCESS, GET_ALL_USERS_REQUEST } from "../constants/userConstants"
 import { DELETE_USER_SUCCESS, DELETE_USER_FAIL } from "../constants/userConstants"
@@ -36,6 +36,8 @@ export const userReducer = (state = { user: {} }, action) => {
             return { ...state, error: action.payload.error }
         case DELETE_USER_SUCCESS:
             return { ...state, isDeleted: true }
+        case DELETE_USER_RESET:
+            return { ...state, isDeleted: false }
         case LOGOUT_FAIL: {
             return { ...state, error: action.payload }
         }
@@ -58,6 +60,7 @@ export const allUsersReducer = (state = { users: [] }, action) => {
         case GET_ALL_USERS_REQUEST:
             return { ...state, loading: false }
         case GET_ALL_USERS_SUCCESS:
+            console.log("im in GET_ALL_USERS_SUCCESS")
             return { ...state, users: action.payload.users, loading: true }
         case GET_ALL_USERS_FAIL:
             return { ...state, loading: false, error: action.payload }

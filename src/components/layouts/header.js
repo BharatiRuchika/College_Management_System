@@ -16,6 +16,7 @@ const Header = () => {
         alert.success('User Logged out successfully')
     }
     const { isAuthenticated, user } = useSelector(state => state.user)
+    console.log("header user",user)
     return (<>
         <nav className="navbar bg-dark text-white row">
             <div className="col-2 col-sm-2 col-lg-2 col-md-2 col-xl-2">

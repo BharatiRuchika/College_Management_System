@@ -13,10 +13,12 @@ const Login = ({ history }) => {
         dateOfBirth: ''
     });
     if (isAuthenticated) {
-        alert.success("user logged in successfully")
+        
         if (user.role == 'admin') {
+            alert.success("admin logged in successfully")
             history.push("/admin");
         } else {
+            alert.success("user logged in successfully")
             history.push("/");
         }
     }
